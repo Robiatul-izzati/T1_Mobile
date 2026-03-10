@@ -1,3 +1,4 @@
+//Robiatul Izzati
 //data class
 data class NilaiMahasiswa(
     val nim: String,
