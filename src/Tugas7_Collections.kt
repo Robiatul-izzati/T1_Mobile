@@ -5,7 +5,6 @@ data class NilaiMahasiswa(
     val mataKuliah: String,
     val nilai: Int
 )
-
 //menentukan grade
 fun getGrade(nilai: Int): String {
     return when (nilai) {
@@ -66,7 +65,7 @@ fun main() {
     val terendah = mahasiswa.minByOrNull { it.nilai }
     println("Nilai terendah: ${terendah?.nama} (${terendah?.nilai})")
 
-    //sorted berdasarkan nilai
+    //sort berdasarkan nilai
     //ascending
     val asc = mahasiswa.sortedBy { it.nilai }
     println("\n===== URUT NILAI ASCENDING =====")
@@ -76,7 +75,7 @@ fun main() {
     println("\n===== URUT NILAI DESCENDING =====")
     desc.forEach { println("${it.nama} - ${it.nilai}") }
 
-    println("\n===== MAHASISWA PER GRADE =====")
+    println("\n===== MAHASIWA PER GRADE =====")
     val groupGrade = mahasiswa.groupBy { getGrade(it.nilai) }
     val urutanGrade = listOf("A","B","C","D","E")
 
@@ -84,7 +83,6 @@ fun main() {
         val listMahasiswa = groupGrade[grade] ?: emptyList()
 
         println("Grade $grade : ${listMahasiswa.size} mahasiswa")
-
         listMahasiswa.forEach {
             println(" - ${it.nama} (${it.nilai})")
         }
