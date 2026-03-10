@@ -18,17 +18,17 @@ fun main(){
 
     print("Masukkan Nilai UAS (0-100)  : ")
     val uas = readLine()!!.toDouble()
-    // validasi nilai
+    //validasi nilai
     if (uts !in 0.0..100.0){
-        println("Nilai UTS harus antara 0 - 100")
+        println("Nilai UAS harus antara 0 - 100")
         return
     }
 
     print("Masukkan Nilai Tugas (0-100): ")
     val tugas = readLine()!!.toDouble()
-    // validasi nilai
+    //validasi nilai
     if (uts !in 0.0..100.0){
-        println("Nilai UTS harus antara 0 - 100")
+        println("Nilai Tugas harus antara 0 - 100")
         return
     }
 
